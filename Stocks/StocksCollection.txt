@@ -1,0 +1,202 @@
+db.ZeroStock.insertMany([
+    {
+        "product_id": "CHB92",
+        "product_name": "Haro Shredder 20 - 2017",
+        "brand_name": "Haro",
+        "category_name": "Children Bicycles",
+        "model_year": 2017,
+        "list_price": 209.99
+    },
+    {
+        "product_id": "CMB302",
+        "product_name": "Electra Townie Original 1 - 2018",
+        "brand_name": "Electra",
+        "category_name": "Comfort Bicycles",
+        "model_year": 2018,
+        "list_price": 449.99
+    },
+    {
+        "product_id": "CRB246",
+        "product_name": "Electra Townie Original 3i EQ Ladies' - 2018",
+        "brand_name": "Electra",
+        "category_name": "Cruisers Bicycles",
+        "model_year": 2018,
+        "list_price": 639.99
+    },
+    {
+        "product_id": "MOB32",
+        "product_name": "Trek Farley Alloy Frameset - 2017",
+        "brand_name": "Trek",
+        "category_name": "Mountain Bikes",
+        "model_year": 2017,
+        "list_price": 469.99
+    },
+    {
+        "product_id": "MOB42",
+        "product_name": "Trek Fuel EX 5 27.5 Plus - 2017",
+        "brand_name": "Trek",
+        "category_name": "Mountain Bikes",
+        "model_year": 2017,
+        "list_price": 2299.99
+    },
+    {
+        "product_id": "MOB6",
+        "product_name": "Surly Ice Cream Truck Frameset - 2016",
+        "brand_name": "Surly",
+        "category_name": "Mountain Bikes",
+        "model_year": 2016,
+        "list_price": 469.99
+    },
+    {
+        "product_id": "MOB8",
+        "product_name": "Trek Remedy 29 Carbon Frameset - 2016",
+        "brand_name": "Trek",
+        "category_name": "Mountain Bikes",
+        "model_year": 2016,
+        "list_price": 1799.99
+    },
+    {
+        "product_id": "RDB160",
+        "product_name": "Trek Emonda SLR 6 - 2018",
+        "brand_name": "Trek",
+        "category_name": "Road Bikes",
+        "model_year": 2018,
+        "list_price": 4499.99
+    },
+    {
+        "product_id": "RDB163",
+        "product_name": "Surly Pack Rat - 2018",
+        "brand_name": "Surly",
+        "category_name": "Road Bikes",
+        "model_year": 2018,
+        "list_price": 1349.00
+    },
+    {
+        "product_id": "RDB168",
+        "product_name": "Surly Straggler - 2018",
+        "brand_name": "Surly",
+        "category_name": "Road Bikes",
+        "model_year": 2018,
+        "list_price": 1549.00
+    },
+    {
+        "product_id": "CHB22",
+        "product_name": "Electra Girl's Hawaii 1 (16-inch) - 2015\/2016",
+        "brand_name": "Electra",
+        "category_name": "Children Bicycles",
+        "model_year": 2016,
+        "list_price": 269.99
+    },
+    {
+        "product_id": "CHB91",
+        "product_name": "Trek Precaliber 24 (21-Speed) - Girls - 2017",
+        "brand_name": "Trek",
+        "category_name": "Children Bicycles",
+        "model_year": 2017,
+        "list_price": 349.99
+    },
+    {
+        "product_id": "CMB299",
+        "product_name": "Electra Townie Original 21D - 2018",
+        "brand_name": "Electra",
+        "category_name": "Comfort Bicycles",
+        "model_year": 2018,
+        "list_price": 559.99
+    },
+    {
+        "product_id": "CRB251",
+        "product_name": "Electra Townie Commute Go! - 2018",
+        "brand_name": "Electra",
+        "category_name": "Cruisers Bicycles",
+        "model_year": 2018,
+        "list_price": 2999.99
+    },
+    {
+        "product_id": "ELB192",
+        "product_name": "Electra Townie Go! 8i - 2017\/2018",
+        "brand_name": "Electra",
+        "category_name": "Electric Bikes",
+        "model_year": 2018,
+        "list_price": 2599.99
+    },
+    {
+        "product_id": "ELB198",
+        "product_name": "Electra Townie Commute Go! - 2018",
+        "brand_name": "Electra",
+        "category_name": "Electric Bikes",
+        "model_year": 2018,
+        "list_price": 2999.99
+    },
+    {
+        "product_id": "MOB47",
+        "product_name": "Trek Remedy 9.8 - 2017",
+        "brand_name": "Trek",
+        "category_name": "Mountain Bikes",
+        "model_year": 2017,
+        "list_price": 5299.99
+    },
+    {
+        "product_id": "RDB158",
+        "product_name": "Trek CrossRip 1 - 2018",
+        "brand_name": "Trek",
+        "category_name": "Road Bikes",
+        "model_year": 2018,
+        "list_price": 959.99
+    },
+    {
+        "product_id": "RDB175",
+        "product_name": "Trek Domane SLR Frameset - 2018",
+        "brand_name": "Trek",
+        "category_name": "Road Bikes",
+        "model_year": 2018,
+        "list_price": 3199.99
+    },
+    {
+        "product_id": "RDB184",
+        "product_name": "Trek Domane SL 6 Disc - 2018",
+        "brand_name": "Trek",
+        "category_name": "Road Bikes",
+        "model_year": 2018,
+        "list_price": 3499.99
+    },
+    {
+        "product_id": "CMB313",
+        "product_name": "Electra Townie Original 1 Ladies' - 2018",
+        "brand_name": "Electra",
+        "category_name": "Comfort Bicycles",
+        "model_year": 2018,
+        "list_price": 449.99
+    },
+    {
+        "product_id": "CRB220",
+        "product_name": "Electra Cruiser 1 Ladies' - 2018",
+        "brand_name": "Electra",
+        "category_name": "Cruisers Bicycles",
+        "model_year": 2018,
+        "list_price": 269.99
+    },
+    {
+        "product_id": "CRB259",
+        "product_name": "Electra Amsterdam Royal 8i Ladies - 2018",
+        "brand_name": "Electra",
+        "category_name": "Cruisers Bicycles",
+        "model_year": 2018,
+        "list_price": 1199.99
+    },
+    {
+        "product_id": "MOB3",
+        "product_name": "Surly Wednesday Frameset - 2016",
+        "brand_name": "Surly",
+        "category_name": "Mountain Bikes",
+        "model_year": 2016,
+        "list_price": 999.99
+    },
+    {
+        "product_id": "RDB59",
+        "product_name": "Trek Domane S 5 Disc - 2017",
+        "brand_name": "Trek",
+        "category_name": "Road Bikes",
+        "model_year": 2017,
+        "list_price": 2599.99
+    }
+])

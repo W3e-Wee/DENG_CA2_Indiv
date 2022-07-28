@@ -1,0 +1,64 @@
+# Query 1: 
+# Find out those bike names which are less than $2000 
+# and belonging to Road Bikes and have zero stock
+db.ZeroStock.find({
+	$and: [
+		{"category_name": "Road Bikes"},
+		{"list_price": {$lt: 2000}}
+	]
+}).pretty()
+
+# Query 2:
+# Find out the unduplicated category names 
+# and unduplicated brand names separately for these unsold products
+db.UnSold.distinct("category_name")
+db.UnSold.distinct("brand_name")
+
+# Query 3:
+# Find the unduplicated sets of category names
+# and brand names in combination
+db.UnSold.aggregate([
+	{$group : { _id: {brand_name: "$brand_name", category_name: "$category_name"}}}
+])
+
+# Query 4:
+# Find the information of those products which are unsold and have stock
+db.UnSold.aggregate([
+	{
+		$lookup: {
+			from: "Stocks",
+			localField: "product_id",
+			foreignField: "product_id",
+			as: "Unsold_w_Stock"
+		}
+	}
+]).pretty()
+
+# Query 5:
+# Making use of the product_id from Query 4, 
+# Find their total stock available arranged in descending order
+db.UnSold.aggregate([
+	{
+		$lookup: {
+			from: "Stocks",
+			localField: "product_id",
+			foreignField: "product_id",
+			as: "Unsold_w_Stock"
+		}
+	},
+	{
+		$project: {
+			"product_id": 1.0,
+			"product_name": 1.0,
+			"brand_name": 1.0,
+			"category_name": 1.0,
+			"list_price": 1.0,
+			"Unsold_w_Stock.quantity": 1.0
+		}
+	}
+]).pretty()
+
+
+# Query 6:
+# Modify Query 4 
+# To find the information of those products which are sold but do not have stock
