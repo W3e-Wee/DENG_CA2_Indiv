@@ -31,34 +31,84 @@ db.UnSold.aggregate([
 			foreignField: "product_id",
 			as: "Unsold_w_Stock"
 		}
-	}
+	},
+    {
+         $match: 
+            {
+                "Unsold_w_Stock":
+                {
+                    $ne: [ ]
+                }
+            }
+    }
 ]).pretty()
 
 # Query 5:
 # Making use of the product_id from Query 4, 
 # Find their total stock available arranged in descending order
 db.UnSold.aggregate([
+    {
+        $lookup:
+            {
+                from: "Stocks",
+                localField: "product_id",
+                foreignField: "product_id",
+                as: "Unsold_w_Stock"
+            }
+    },
+    {
+        $match: 
+            { 
+                "Unsold_w_Stock": 
+                    {
+                        $ne: []
+                    }
+            }
+    },
+    {
+        $unwind: "$Unsold_w_Stock"
+    },
+    {
+        $group: 
+            {
+                _id: "$product_id" , 
+				quantity:{$sum: "$Unsold_w_Stock.quantity"}	
+            }
+    },
 	{
-		$lookup: {
-			from: "Stocks",
-			localField: "product_id",
-			foreignField: "product_id",
-			as: "Unsold_w_Stock"
-		}
-	},
-	{
-		$project: {
-			"product_id": 1.0,
-			"product_name": 1.0,
-			"brand_name": 1.0,
-			"category_name": 1.0,
-			"list_price": 1.0,
-			"Unsold_w_Stock.quantity": 1.0
-		}
+		$sort: {"quantity": -1}
 	}
 ]).pretty()
-
 
 # Query 6:
 # Modify Query 4 
 # To find the information of those products which are sold but do not have stock
+db.ZeroStock.aggregate([
+	{
+		$lookup: {
+			from: "UnSold",
+			localField: "product_id",
+			foreignField: "product_id",
+			as: "Sold_wo_Stock"
+		}
+	},
+    {
+        $match: {
+            "Sold_wo_Stock": {
+                $eq: []
+            }
+        }
+    },
+    {
+       $group: {
+            _id: {
+                    product_id: "$product_id", 
+                    product_name: "$product_name",
+                    brand_name: "$brand_name",
+                    category_name: "$category_name",
+                    model_year: "$model_year",
+                    list_price: "$list_price"
+                }
+        }
+    }
+]).pretty()
