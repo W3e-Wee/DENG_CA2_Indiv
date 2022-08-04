@@ -1,12 +1,7 @@
 # Query 1: 
 # Find out those bike names which are less than $2000 
 # and belonging to Road Bikes and have zero stock
-db.ZeroStock.find({
-	$and: [
-		{"category_name": "Road Bikes"},
-		{"list_price": {$lt: 2000}}
-	]
-}).pretty()
+db.ZeroStock.find({$and: [{"category_name": "Road Bikes"},{"list_price": {$lt: 2000}}]}).pretty()
 
 # Query 2:
 # Find out the unduplicated category names 

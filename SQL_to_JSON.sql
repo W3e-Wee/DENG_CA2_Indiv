@@ -34,7 +34,7 @@ WHERE
     B.brand_id = P.brand_id 
     AND
     C.category_id = P.category_id
--- FOR JSON PATH
+FOR JSON PATH
 
 
 
@@ -67,7 +67,7 @@ GROUP BY
 	c.category_name,
 	p.model_year,
 	p.list_price
---FOR JSON PATH
+FOR JSON PATH
 
 select * from sales.order_items
 
